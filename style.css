@@ -103,6 +103,7 @@ body{
     border-radius: 50px;
     font-size: 17px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .hamburger{
@@ -164,6 +165,7 @@ body{
     color: var(--bg);
     border-radius: 50px;
     font-size: 17px;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -175,6 +177,7 @@ body{
     cursor: pointer;
     background: transparent;
     font-size: 17px;
+    text-decoration: none;
 }
 
 /*Hero Ends*/
@@ -549,8 +552,8 @@ textarea.detail{
         rgba(255, 255, 255, 0.04),
         rgba(255, 255, 255, 0.02)
     );
-    backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
+    backdrop-filter: blur(12px) saturate(150%);
 }
 
 .footer-container {
@@ -663,8 +666,8 @@ textarea.detail{
         rgba(255,255,255,0.10),
         rgba(255,255,255,0.04)
     );
-    backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
+    backdrop-filter: blur(12px) saturate(150%);
     cursor: pointer;
     transition: 0.3s ease;
     height: 230px;
@@ -750,8 +753,8 @@ textarea.detail{
         rgba(255,255,255,0.10),
         rgba(255,255,255,0.04)
     );
-    backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
+    backdrop-filter: blur(12px) saturate(150%);
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -862,8 +865,8 @@ textarea.detail{
         rgba(255,255,255,0.10),
         rgba(255,255,255,0.04)
     );
-    backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
+    backdrop-filter: blur(12px) saturate(150%);
 }
 
 .faq-item input {
@@ -932,12 +935,14 @@ textarea.detail{
     font-size: 1.9rem;
     font-weight: 700;
     margin-bottom: 12px;
+    color: var(--white);
 }
 
 .cta-box p {
     color: var(--textLight);
     font-size: 1.05rem;
     margin-bottom: 24px;
+    color: var(--white);
 }
 
 .cta-actions {
@@ -949,7 +954,7 @@ textarea.detail{
 
 .cta-main {
     background: var(--accent);
-    color: white;
+    color: var(--bg);
     padding: 14px 28px;
     border-radius: 8px;
     text-decoration: none;
@@ -980,7 +985,10 @@ textarea.detail{
 /*Why Us Begins*/
 
 .why-section {
+    position: relative;
     margin-top: 60px;
+    z-index: 10;
+    padding: 0 40px;
 }
 
 .why-section h2 {
@@ -988,6 +996,11 @@ textarea.detail{
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 8px;
+    color: var(--white);
+}
+
+.why-section p{
+    color: var(--white);
 }
 
 .why-sub {
@@ -1006,20 +1019,27 @@ textarea.detail{
     border: 1px solid var(--accent);
     padding: 22px;
     border-radius: 12px;
-    background: var(--primaryBg);
-    box-shadow: rgba(0,0,0,0.05) 0px 3px 8px;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.10),
+        rgba(255,255,255,0.04)
+    );
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    backdrop-filter: blur(12px) saturate(150%);
 }
 
 .why-card h3 {
     font-size: 1.2rem;
     margin-bottom: 8px;
     font-weight: 600;
+    color: var(--white);
 }
 
 .why-card p {
     font-size: 0.95rem;
     color: var(--textLight);
     line-height: 1.5;
+    color: var(--white);
 }
 
 /*WHy Us Ends*/
