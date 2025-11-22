@@ -1,0 +1,458 @@
+:root{
+    --bg:#0f1724; /* dark navy */
+    --card:#0b1220;
+    --muted:#9aa6b2;
+    --accent:#6ee7b7; /* mint */
+    --accent-2:#60a5fa; /* blue */
+    --primary: #D4AF37;
+    --white:#ffffff;
+    --max-width:1100px;
+    --radius:12px;
+    --gap:28px;
+    --shadow: 0 6px 18px rgba(2,6,23,0.6);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    width: 100vw;
+    height: max-content;
+    overflow-x: hidden;
+    background: var(--bg);
+}
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.background-left,
+.background-right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-img{
+    height: 60%;
+    width: 60%;
+}
+
+/*Header Begins*/
+
+.header{
+    position: relative;
+    height: 100px;
+    width: 100vw;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.logo-container{
+    height: 50px;
+    width: 75px;
+}
+
+.logo{
+    height: 100%;
+    width: 100%;
+}
+
+.nav-container{
+    height: max-content;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.nav-items{
+    height: max-content;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.header-cta-btn{
+    padding: 10px 25px;
+    border: none;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 50px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.hamburger{
+    display: none;
+}
+
+/*Header Ends*/
+
+/*Hero Begins*/
+
+.hero{
+    position: relative;
+    height: calc(100vh - 100px);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 100px;
+    z-index: 10;
+}
+
+.hero-content{
+    height: max-content;
+    width: 65%;
+}
+
+.hero-content h4{
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content h2{
+    font-size: 45px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.hero-content p{
+    color: var(--white);
+    line-height: 24px;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.hero-btn-container{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-whatsapp-cta{
+    padding: 10px 25px;
+    border: none;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 50px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.hero-consult-cta{
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: transparent;
+    font-size: 17px;
+}
+
+/*Hero Ends*/
+
+/*Expertise Begins*/
+
+.expertise{
+    position: relative;
+    height: max-content;
+    width: 100vw;
+    padding: 0 100px;
+    z-index: 10;
+}
+
+.expertise h2{
+    font-size: 35px;
+    margin: 40px 0;
+    color: var(--white);
+}
+
+.expertise-content{
+    height: max-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.expertise-card{
+    border: 1px solid var(--accent);
+    padding: 10px;
+    border-radius: 10px;
+
+    background: var(--bg); /* transparent layer */
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    backdrop-filter: blur(12px) saturate(150%);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.10),
+        rgba(255, 255, 255, 0.04)
+    );
+    cursor: pointer;
+}
+
+.expertise-card h3{
+    color: var(--white);
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.expertise-card p{
+    font-size: 17px;
+    line-height: 24px;
+    color: var(--white);
+}
+
+/*Expertise Ends*/
+
+/*Projects Begins*/
+
+.projects{
+    position: relative;
+    height: max-content;
+    width: 100vw;
+    padding: 0 100px;
+    z-index: 10;
+}
+
+.projects h2{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 35px;
+    color: var(--white);
+}
+
+.project-text{
+    color: var(--white);
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.projects-container{
+    height: max-content;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.project-container-content{
+    height: max-content;
+    width: max-content;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.project-card{
+    height: max-content;
+    width: 400px;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    margin: 10px 0;
+    background: var(--bg); /* transparent layer */
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    backdrop-filter: blur(12px) saturate(150%);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.10),
+        rgba(255, 255, 255, 0.04)
+    );
+}
+
+.project-card-top{
+    height: 200px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.project-img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project-card-bottom{
+    height: 300px;
+    width: 100%;
+    padding: 0 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card-bottom h3{
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.project-card-bottom p{
+    font-size: 17px;
+    line-height: 24px;
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+.project-card-bottom a{
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 17px;
+    text-decoration: none;
+    width: max-content;
+}
+
+/*Projects Ends*/
+
+/*Consultation begins*/
+
+.consultation{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.consultation-form{
+    height: max-content;
+    width: 500px;
+    border: 1px solid var(--accent);
+    padding: 0 20px;
+    border-radius: 10px;
+    background: var(--bg);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    backdrop-filter: blur(12px) saturate(150%);
+    background: linear-gradient(135deg, rgba(3, 8, 34, 0.1), rgba(0, 7, 44, 0.04));
+}
+
+.consultation-form-header{
+    height: max-content;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--accent);
+    margin-bottom: 20px;
+}
+
+.consultation-form-header h2{
+    text-align: center;
+    font-size: 35px;
+    color: var(--white);
+}
+
+.consultation-form-content{
+    height: max-content;
+    width: 100%;
+}
+
+.consultation-form-content-top,
+.consultation-form-content-bottom,
+.consultation-form-content-middle{
+    height: max-content;
+    width: 100%;
+}
+
+.consultation-form-content-middle{
+    display: flex;
+    gap: 20px;
+}
+
+.consultation-form-content-top .details,
+.consultation-form-content-bottom .details{
+    width: 100%;
+    height: max-content;
+}
+
+.consultation-form-content-middle .details{
+    width: 50%;
+    height: max-content;
+}
+
+.details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.details label{
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    color: var(--white);
+    background: var(--bg);
+    padding: 0 10px;
+}
+
+.detail{
+    height: 40px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 17px;
+    outline: none;
+    color: var(--white);
+}
+
+textarea.detail{
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.consultation-submit-btn-container{
+    height: max-content;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid var(--accent);
+}
+
+.submit-btn{
+    height: max-content;
+    width: 100%;
+    background: var(--accent);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--bg);
+}
+
+/*Consultation ends*/
