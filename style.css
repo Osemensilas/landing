@@ -1167,7 +1167,7 @@ textarea.detail{
         padding: 0 20px;
     }
     .testimonials-container {
-        height: 350px;
+        height: 300px;
         overflow-x: auto;
     }
     .faq-section {
@@ -1200,5 +1200,8 @@ textarea.detail{
     }
     .background-right{
         display: none;
+    }
+    .testimonial-card {
+        width: 80vw;
     }
 }

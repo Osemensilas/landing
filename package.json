@@ -1,0 +1,25 @@
+{
+  "name": "iruhost-landing",
+  "version": "1.0.0",
+  "description": "landing page by Iruap tech studio limited",
+  "homepage": "https://github.com/Osemensilas/landing#readme",
+  "bugs": {
+    "url": "https://github.com/Osemensilas/landing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Osemensilas/landing.git"
+  },
+  "license": "ISC",
+  "author": "Osemen Silas",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  }
+}
