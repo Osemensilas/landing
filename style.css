@@ -2,7 +2,7 @@
     --bg:#0f1724; /* dark navy */
     --card:#0b1220;
     --muted:#9aa6b2;
-    --accent:#6ee7b7; /* mint */
+    --accent:#D4AF37; /* mint */
     --accent-2:#60a5fa; /* blue */
     --primary: #D4AF37;
     --white:#ffffff;
@@ -122,7 +122,7 @@ body{
     align-items: center;
     justify-content: flex-start;
     padding: 0 100px;
-    z-index: 10;
+    z-index: 5;
 }
 
 .hero-content{
@@ -291,7 +291,7 @@ body{
 
 .project-card-top{
     height: 200px;
-    width: 400px;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -831,7 +831,7 @@ textarea.detail{
     position: relative;
     width: 100vw;
     padding: 0 100px;
-    margin-top: 120px;
+    margin-top: 100px;
     z-index: 10;
 }
 
@@ -928,7 +928,13 @@ textarea.detail{
     padding: 40px 24px;
     text-align: center;
     background: var(--primaryBg);
-    box-shadow: rgba(0,0,0,0.05) 0 4px 10px;
+    background: linear-gradient(
+            135deg,
+            rgba(255,255,255,0.10),
+            rgba(255,255,255,0.04)
+        );
+        -webkit-backdrop-filter: blur(12px) saturate(150%);
+        backdrop-filter: blur(12px) saturate(150%);
 }
 
 .cta-box h2 {
@@ -1043,3 +1049,156 @@ textarea.detail{
 }
 
 /*WHy Us Ends*/
+
+@media only screen and (max-width: 767px){
+    .header{
+        padding: 0 20px;
+    }
+    .nav-container {
+        display: none;
+    }
+    .nav-container.active{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: max-content;
+        display: block;
+        background: linear-gradient(
+            135deg,
+            rgba(255,255,255,0.10),
+            rgba(255,255,255,0.04)
+        );
+        -webkit-backdrop-filter: blur(12px) saturate(150%);
+        backdrop-filter: blur(12px) saturate(150%);
+        padding: 20px;
+        z-index: 10;
+    }
+    .nav-container.active .nav-items{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+    .hamburger{
+        display: block;
+        position: relative;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .ham-icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 2px;
+        width: 40px;
+        background: var(--accent);
+        transition: 0.3s ease-in-out;
+    }
+    .ham-icon.active{
+        background: transparent;
+    }
+    .ham-icon::after{
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: 0;
+        height: 2px;
+        width: 40px;
+        background: var(--accent);
+        transition: 0.3s ease-in-out;
+    }
+    .ham-icon.active::after{
+        top: 0;
+        transform: rotate(45deg);
+    }
+    .ham-icon::before{
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 0;
+        height: 2px;
+        width: 40px;
+        background: var(--accent);
+        transition: 0.3s ease-in-out;
+    }
+    .ham-icon.active::before{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    .hero {
+        padding: 0 20px;
+    }
+    .hero-content {
+        width: 90%;
+    }
+    .hero-btn-container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .expertise {
+        padding: 0 20px;
+    }
+    .expertise-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .projects {
+        padding: 0 20px;
+    }
+    .project-card {
+        width: 80vw;
+    }
+    .project-card-bottom{
+        height: max-content;
+    }
+    .pricing {
+        padding: 0 20px;
+    }
+    .pricing-container,
+    .about-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about {
+        padding: 100px 20px;
+    }
+    .testimonials {
+        padding: 0 20px;
+    }
+    .testimonials-container {
+        height: 350px;
+        overflow-x: auto;
+    }
+    .faq-section {
+        padding: 0 20px;
+    }
+    .consultation{
+        padding: 0 20px;
+    }
+    .consultation-form{
+        width: 100%;
+    }
+    .consultation-form-content-middle {
+        flex-direction: column;
+        gap: 0;
+    }
+    .consultation-form-content-middle .details {
+        width: 100%;
+    }
+    .cta-wrapper {
+        padding: 0 20px;
+    }
+    .why-section {
+        padding: 0 20px;
+    }
+    .footer {
+        padding: 80px 20px 40px 20px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .background-right{
+        display: none;
+    }
+}
