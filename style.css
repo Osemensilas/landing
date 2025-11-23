@@ -50,6 +50,10 @@ body{
     width: 60%;
 }
 
+.text-white{
+    color: var(--white);
+}
+
 /*Header Begins*/
 
 .header{
